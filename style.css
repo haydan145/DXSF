@@ -59,8 +59,8 @@ header p { margin: 10px 0; font-size: 1.2em; }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
+  gap: 20px;          /* spacing between cards */
+  padding: 40px 20px; /* original padding */
   z-index: 3;
   position: relative;
 }
@@ -125,4 +125,3 @@ footer {
   header h1 { font-size: 1.6em; }
   header p { font-size: 1em; }
 }
-
