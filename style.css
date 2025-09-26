@@ -1,3 +1,9 @@
+/* === Theme Colors === */
+:root {
+  --maroon: #800000;  /* true maroon */
+  --navy: #000080;    /* deep navy */
+}
+
 /* === Base Layout === */
 body {
   margin: 0;
@@ -21,8 +27,8 @@ body {
   width: 60px;
   z-index: 1;
 }
-.left-panel { left: 0; background-color: maroon; }
-.right-panel { right: 0; background-color: navy; }
+.left-panel { background-color: var(--maroon); left: 0; }
+.right-panel { background-color: var(--navy); right: 0; }
 
 /* === Ribbons === */
 .ribbon {
@@ -32,14 +38,14 @@ body {
   width: 10px;
   z-index: 2;
 }
-.left-ribbon { left: 65px; background-color: maroon; }
-.right-ribbon { right: 65px; background-color: navy; }
+.left-ribbon { background-color: var(--maroon); left: 65px; }
+.right-ribbon { background-color: var(--navy); right: 65px; }
 
 /* === Header === */
 header {
   text-align: center;
   padding: 40px 20px 20px;
-  background-color: maroon;
+  background-color: var(--maroon);
   color: white;
   z-index: 3;
   position: relative;
@@ -64,7 +70,7 @@ header p { margin: 10px 0; font-size: 1.2em; }
   display: flex;
   width: 200px;
   height: 120px;
-  background-color: navy;
+  background-color: var(--navy);
   color: white;
   text-decoration: none;
   border-radius: 10px;
@@ -78,7 +84,7 @@ header p { margin: 10px 0; font-size: 1.2em; }
 }
 
 .link-card:hover {
-  background-color: maroon;
+  background-color: var(--maroon);
   transform: translateY(-5px);
   cursor: pointer;
 }
@@ -98,7 +104,7 @@ footer {
   display: inline-block;
   margin-top: 20px;
   text-decoration: none;
-  color: maroon;
+  color: var(--maroon);
   font-weight: bold;
 }
 .back-link:hover { text-decoration: underline; }
@@ -119,3 +125,4 @@ footer {
   header h1 { font-size: 1.6em; }
   header p { font-size: 1em; }
 }
+
