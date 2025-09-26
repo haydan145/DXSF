@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  z-index: 0;
 }
 
 /* === Side Panels === */
@@ -18,10 +19,10 @@ body {
   top: 0;
   bottom: 0;
   width: 60px;
-  z-index: 0;
+  z-index: 1;
 }
-.left-panel { left: 0; background: maroon; }
-.right-panel { right: 0; background: navy; }
+.left-panel { left: 0; background-color: maroon; }
+.right-panel { right: 0; background-color: navy; }
 
 /* === Ribbons === */
 .ribbon {
@@ -29,17 +30,19 @@ body {
   top: 0;
   bottom: 0;
   width: 10px;
-  z-index: 1;
+  z-index: 2;
 }
-.left-ribbon { left: 65px; background: maroon; }
-.right-ribbon { right: 65px; background: navy; }
+.left-ribbon { left: 65px; background-color: maroon; }
+.right-ribbon { right: 65px; background-color: navy; }
 
 /* === Header === */
 header {
   text-align: center;
   padding: 40px 20px 20px;
-  background: maroon;
+  background-color: maroon;
   color: white;
+  z-index: 3;
+  position: relative;
 }
 
 header h1 { margin: 0; font-size: 2em; }
@@ -52,28 +55,30 @@ header p { margin: 10px 0; font-size: 1.2em; }
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
+  z-index: 3;
+  position: relative;
 }
 
 /* === Link Cards === */
 .link-card {
-  display: block;
+  display: flex;
   width: 200px;
   height: 120px;
-  background: navy;
+  background-color: navy;
   color: white;
   text-decoration: none;
   border-radius: 10px;
   font-size: 1.3em;
-  display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s, background-color 0.2s;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 3;
 }
 
 .link-card:hover {
-  background: maroon;
+  background-color: maroon;
   transform: translateY(-5px);
   cursor: pointer;
 }
@@ -84,6 +89,8 @@ footer {
   padding: 20px;
   background: #eee;
   color: #666;
+  z-index: 3;
+  position: relative;
 }
 
 /* === Back Link for subpages === */
